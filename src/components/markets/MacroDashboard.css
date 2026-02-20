@@ -1,0 +1,49 @@
+.macro-dashboard {
+  margin-top: 0.5rem;
+}
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.macro-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.macro-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.macro-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.macro-change {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.macro-change.up {
+  color: var(--green);
+}
+
+.macro-change.down {
+  color: var(--red);
+}
+
+.macro-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

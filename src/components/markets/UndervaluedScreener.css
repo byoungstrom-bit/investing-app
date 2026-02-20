@@ -1,0 +1,111 @@
+.undervalued-screener {
+  margin-top: 0.5rem;
+}
+
+.data-disclaimer {
+  background: rgba(255, 180, 84, 0.15);
+  border: 1px solid rgba(255, 180, 84, 0.4);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+
+.data-disclaimer strong {
+  color: var(--text);
+}
+
+.screener-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.screener-controls label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.screener-controls select {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+.screener-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.screener-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.screener-table th,
+.screener-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.screener-table th {
+  background: var(--bg-elevated);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.screener-table tr:last-child td {
+  border-bottom: none;
+}
+
+.screener-table tr:hover td {
+  background: rgba(57, 186, 230, 0.05);
+}
+
+.screener-table .symbol {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.screener-table .score-badge {
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.screener-table .score-badge.high {
+  background: rgba(127, 217, 98, 0.2);
+  color: var(--green);
+}
+
+.screener-table .score-badge.mid {
+  background: rgba(255, 180, 84, 0.2);
+  color: var(--amber);
+}
+
+.screener-table .score-badge.low {
+  background: rgba(240, 113, 120, 0.2);
+  color: var(--red);
+}
+
+.screener-table .change.up {
+  color: var(--green);
+}
+
+.screener-table .change.down {
+  color: var(--red);
+}

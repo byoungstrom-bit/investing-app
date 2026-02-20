@@ -1,0 +1,356 @@
+/**
+ * Recommendations from Top Investors - 2026 Outlook
+ * Sources: All-In Podcast, ARK Invest, Berkshire letters, public commentary
+ */
+
+export const recommendationsData = {
+  sections: [
+    {
+      id: 'all-in',
+      title: 'All-In Podcast 2026 Predictions',
+      source: 'Jan 10, 2026 episode',
+      youtubeUrl: 'https://www.youtube.com/watch?v=yEb2DX0TzKM',
+      members: [
+        {
+          id: 'chamath',
+          name: 'Chamath Palihapitiya',
+          role: 'Social Capital, Former Facebook',
+          avatar: 'CH',
+          recommends: [
+            { asset: 'Copper / Critical Metals Basket', ticker: 'CPER, FCX, SCCO', rationale: '~70% global supply deficit by 2040 from AI data centers, electrification, and defense. "Absolutely parabolic" potential.', transcriptRef: '1:03:05' },
+            { asset: 'Tech Supercycle', ticker: null, rationale: 'Trump prosperity theory. Atlanta Fed raised Q4 GDP forecast to 5.4%. AI productivity gains, 2026 tax cuts.', transcriptRef: '1:03:05' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Oil / Hydrocarbons', ticker: 'XLE, USO', rationale: 'Downward trend irreversible. Oil more likely to fall to $45/barrel than back to $65.', transcriptRef: '1:08:02' },
+            { asset: 'Enterprise SaaS Software', ticker: 'CRM, NOW, WDAY, DOCU', rationale: '90% of $3-4T revenue from "maintenance" and "migration." AI will shrink these dramatically.', transcriptRef: '40:51' }
+          ]
+        },
+        {
+          id: 'jason',
+          name: 'Jason Calacanis',
+          role: 'Angel Investor, All-In Host',
+          avatar: 'JC',
+          recommends: [
+            { asset: 'Speculative/Gambling Platforms', ticker: 'HOOD, COIN', rationale: 'Robinhood, Polymarket, PrizePicks, Coinbase. People will have more spare cash to bet and speculate.', transcriptRef: '1:03:05' },
+            { asset: 'Amazon', ticker: 'AMZN', rationale: 'First "corporate singularity" - robots contribute more profit than humans. Zoox progressing, massive automation.', transcriptRef: '32:15' }
+          ],
+          recommendsAgainst: [
+            { asset: 'US Dollar', ticker: 'UUP', rationale: 'National debt growing $2T this year. People turning to gold, silver, copper.', transcriptRef: '1:08:02' },
+            { asset: 'Young White-Collar Entry Jobs', ticker: null, rationale: 'Companies automating with AI instead of training graduates. Bottom third of tasks replaceable.', transcriptRef: '40:51' }
+          ]
+        },
+        {
+          id: 'sacks',
+          name: 'David Sacks',
+          role: 'Craft Ventures, Former PayPal',
+          avatar: 'DS',
+          recommends: [
+            { asset: 'Tech Sector Supercycle', ticker: 'QQQ, SPY', rationale: '"Trump Prosperity" theory. IPO boom, trillions in new market cap.', transcriptRef: '1:03:05' },
+            { asset: 'IPO Market', ticker: null, rationale: 'Huge wave of companies going public. SpaceX, Anduril, Stripe, Anthropic, OpenAI potential.', transcriptRef: '32:15' }
+          ],
+          recommendsAgainst: [
+            { asset: 'California Luxury Real Estate', ticker: null, rationale: 'Wealth tax rumors creating enormous pressure.', transcriptRef: '1:08:02' },
+            { asset: 'California Economy', ticker: null, rationale: 'Wealth tax and regulatory overreach driving businesses and capital out.', transcriptRef: '40:51' }
+          ]
+        },
+        {
+          id: 'friedberg',
+          name: 'David Friedberg',
+          role: 'The Production Board, Sultan of Science',
+          avatar: 'DF',
+          recommends: [
+            { asset: 'Polymarket', ticker: null, rationale: 'Network effects emerging. Replacing traditional media and markets. Real-time news and collective intelligence.', transcriptRef: '1:03:05' },
+            { asset: 'Huawei', ticker: null, rationale: 'Exceeding chip expectations with vertical stack outside US restrictions.', transcriptRef: '32:15' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Netflix / Traditional Media', ticker: 'NFLX', rationale: 'Content library challenged. Needs Warner Bros acquisition. Independent creators disrupting.', transcriptRef: '1:08:02' },
+            { asset: 'State Governments', ticker: null, rationale: 'Exposed pension liabilities, financing crises. Long-term solvency questioned.', transcriptRef: '40:51' }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'other-investors',
+      title: 'Other Top Investors — 2026 Outlook',
+      source: 'Public commentary, letters, interviews',
+      members: [
+        {
+          id: 'buffett',
+          name: 'Warren Buffett',
+          role: 'Berkshire Hathaway',
+          avatar: 'WB',
+          recommends: [
+            { asset: 'Alphabet (Google)', ticker: 'GOOGL', rationale: 'Trading at discounted valuations. 23% of Berkshire in AI stocks. Strong upside potential.', transcriptRef: '2026 Berkshire' },
+            { asset: 'Amazon', ticker: 'AMZN', rationale: 'Growth expected to resume with AI opportunities. Core holding.', transcriptRef: '2026 Berkshire' },
+            { asset: 'DaVita', ticker: 'DVA', rationale: 'Stock to "buy hand over fist" after extended slump and strong earnings.', transcriptRef: 'Motley Fool 2026' }
+          ],
+          recommendsAgainst: [
+            { asset: 'UnitedHealth', ticker: 'UNH', rationale: 'Below Buffett\'s entry point. Continued pressure from healthcare challenges.', transcriptRef: '2026' }
+          ]
+        },
+        {
+          id: 'munger',
+          name: 'Charlie Munger',
+          role: 'Berkshire Hathaway (d. 2023)',
+          avatar: 'CM',
+          recommends: [
+            { asset: 'Quality companies at fair prices', ticker: null, rationale: 'Lasting principle: "Invert, always invert." Buy wonderful businesses with durable moats.', transcriptRef: 'Enduring principles' },
+            { asset: 'Costco', ticker: 'COST', rationale: 'Lifelong holding. Exemplifies value, customer-first culture, efficient operations.', transcriptRef: 'Historical' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Speculation & leverage', ticker: null, rationale: 'Avoid crypto, meme stocks. "Avoid stupidity" before seeking brilliance.', transcriptRef: 'Enduring principles' }
+          ]
+        },
+        {
+          id: 'lynch',
+          name: 'Peter Lynch',
+          role: 'Fidelity Magellan',
+          avatar: 'PL',
+          recommends: [
+            { asset: 'Companies you understand', ticker: null, rationale: 'Invest in what you know. Look for 10-baggers in everyday life.', transcriptRef: 'One Up on Wall Street' },
+            { asset: 'Undervalued growth', ticker: null, rationale: 'PEG ratio < 1. Strong earnings growth at reasonable prices.', transcriptRef: 'Enduring principles' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Timing the market', ticker: null, rationale: 'Stay invested. "Time in the market beats timing the market."', transcriptRef: 'Enduring principles' }
+          ]
+        },
+        {
+          id: 'dalio',
+          name: 'Ray Dalio',
+          role: 'Bridgewater Associates',
+          avatar: 'RD',
+          recommends: [
+            { asset: 'Gold & diversification', ticker: 'GLD', rationale: 'Capital war risks. Dollar erosion from $38T debt. Gold outperformed stocks in 2025.', transcriptRef: 'Fortune 2026' },
+            { asset: 'Non-correlated assets', ticker: null, rationale: 'Geopolitical tensions. Diversify across currencies and asset classes.', transcriptRef: '2026 outlook' }
+          ],
+          recommendsAgainst: [
+            { asset: 'AI stocks at current euphoria', ticker: null, rationale: 'AI in "early stages of a bubble" — comparable to 80% of 1929 or 2000 dot-com levels.', transcriptRef: 'AOL 2026' },
+            { asset: 'Concentrated equity bets', ticker: null, rationale: 'Low expected returns (~4.7%). Equities and gold "more fragile."', transcriptRef: 'Financial Express 2026' }
+          ]
+        },
+        {
+          id: 'soros',
+          name: 'George Soros',
+          role: 'Soros Fund Management',
+          avatar: 'GS',
+          recommends: [
+            { asset: 'Reflexivity in markets', ticker: null, rationale: 'Markets influence fundamentals. Look for reflexive feedback loops.', transcriptRef: 'Philosophy' },
+            { asset: 'Macro hedge positions', ticker: null, rationale: 'Political and currency volatility create opportunities.', transcriptRef: 'Historical approach' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Ignoring political risk', ticker: null, rationale: 'Geopolitics drives markets. Regime change, policy shifts matter.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'druckenmiller',
+          name: 'Stanley Druckenmiller',
+          role: 'Duquesne Family Office',
+          avatar: 'SD',
+          recommends: [
+            { asset: 'AI infrastructure', ticker: 'NVDA', rationale: 'Major AI bet. Infrastructure buildout has years to run.', transcriptRef: '2025-26' },
+            { asset: 'Concentrated conviction', ticker: null, rationale: 'When you have high conviction, size positions accordingly.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Long-duration bonds', ticker: null, rationale: 'Fiscal deficits and inflation risk. Duration risk in fixed income.', transcriptRef: 'Recent commentary' }
+          ]
+        },
+        {
+          id: 'klarman',
+          name: 'Seth Klarman',
+          role: 'Baupost Group',
+          avatar: 'SK',
+          recommends: [
+            { asset: 'Margin of safety', ticker: null, rationale: 'Buy at significant discount to intrinsic value. Patience for opportunities.', transcriptRef: 'Margin of Safety' },
+            { asset: 'Cash as dry powder', ticker: null, rationale: 'Hold cash for when markets dislocate. Volatility creates opportunities.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Chasing momentum', ticker: null, rationale: 'Avoid crowded trades. "The best opportunities come when others are forced to sell."', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'marks',
+          name: 'Howard Marks',
+          role: 'Oaktree Capital',
+          avatar: 'HM',
+          recommends: [
+            { asset: 'Quality, liquidity, balance sheets', ticker: null, rationale: 'Calibrate exposure. Defensive tilts when optimism peaks. Valuations lofty but not insane.', transcriptRef: '2026 outlook' },
+            { asset: 'Avoid catastrophic losses', ticker: null, rationale: 'Compounding is defense-first. Avoiding big losses beats chasing gains.', transcriptRef: 'Intelligent Investor 2026' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Market timing', ticker: null, rationale: 'We never know where we\'re going. Focus on where we are. Ordinary businesses priced like greatness.', transcriptRef: '2026' }
+          ]
+        },
+        {
+          id: 'greenblatt',
+          name: 'Joel Greenblatt',
+          role: 'Gotham Capital',
+          avatar: 'JG',
+          recommends: [
+            { asset: 'Magic Formula stocks', ticker: null, rationale: 'High earnings yield + high ROIC. Systematic value approach.', transcriptRef: 'Little Book' },
+            { asset: 'Cheap + good', ticker: null, rationale: 'Buy good businesses when they\'re cheap. Mean reversion.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Overpaying for quality', ticker: null, rationale: 'Price matters. Even great businesses can be bad investments at wrong price.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'ackman',
+          name: 'Bill Ackman',
+          role: 'Pershing Square',
+          avatar: 'BA',
+          recommends: [
+            { asset: 'Meta Platforms', ticker: 'META', rationale: '"Deeply discounted valuation." 10% of Pershing Square. Major stake disclosed Feb 2026.', transcriptRef: 'CNBC 2026' },
+            { asset: 'AI stocks', ticker: null, rationale: '48% of portfolio in 3 AI stocks. One expected to 10x addressable market by 2033.', transcriptRef: 'Motley Fool 2026' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Overvalued growth', ticker: null, rationale: 'Seeks mispriced quality. Activist when management underperforms.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'icahn',
+          name: 'Carl Icahn',
+          role: 'Icahn Enterprises',
+          avatar: 'CI',
+          recommends: [
+            { asset: 'Undervalued + activist', ticker: null, rationale: 'Target undervalued companies. Push for change to unlock value.', transcriptRef: 'Philosophy' },
+            { asset: 'Energy & commodities', ticker: 'IEP', rationale: 'Historical focus on sectors with catalyst-driven value.', transcriptRef: 'Portfolio' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Poor capital allocation', ticker: null, rationale: 'Opposes management that destroys shareholder value.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'tepper',
+          name: 'David Tepper',
+          role: 'Appaloosa Management',
+          avatar: 'DT',
+          recommends: [
+            { asset: 'Risk-on when Fed eases', ticker: null, rationale: 'Macro-driven. Bullish when Fed cuts, fiscal policy supportive.', transcriptRef: 'Philosophy' },
+            { asset: 'Tech & growth', ticker: null, rationale: 'Historically favors growth when liquidity favorable.', transcriptRef: 'Historical' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Fighting the Fed', ticker: null, rationale: 'Don\'t fight central bank policy. Liquidity drives markets.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'griffin',
+          name: 'Ken Griffin',
+          role: 'Citadel',
+          avatar: 'KG',
+          recommends: [
+            { asset: 'Quantitative edge', ticker: null, rationale: 'Data-driven. Technology and execution advantage.', transcriptRef: 'Philosophy' },
+            { asset: 'Market making', ticker: null, rationale: 'Liquidity provision. Scale and technology matter.', transcriptRef: 'Citadel approach' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Emotional decisions', ticker: null, rationale: 'Systematic over discretionary. Remove emotion from investing.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'simons',
+          name: 'Jim Simons',
+          role: 'Renaissance Technologies (d. 2024)',
+          avatar: 'JS',
+          recommends: [
+            { asset: 'Quantitative models', ticker: null, rationale: 'Data, pattern recognition. Medallion Fund approach.', transcriptRef: 'Legacy' },
+            { asset: 'Systematic edge', ticker: null, rationale: 'Remove human bias. Let signals drive decisions.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Discretionary macro bets', ticker: null, rationale: 'Quant over discretionary. Backtest everything.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'thiel',
+          name: 'Peter Thiel',
+          role: 'Founders Fund',
+          avatar: 'PT',
+          recommends: [
+            { asset: 'Monopoly businesses', ticker: null, rationale: 'Competition is for losers. Seek 10x differentiated companies.', transcriptRef: 'Zero to One' },
+            { asset: 'Contrarian tech', ticker: null, rationale: 'Secret truths. Non-consensus and right.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Incrementalism', ticker: null, rationale: 'Avoid "competition" and "me too" businesses. Think 10 years ahead.', transcriptRef: 'Zero to One' }
+          ]
+        },
+        {
+          id: 'andreessen',
+          name: 'Marc Andreessen',
+          role: 'a16z',
+          avatar: 'MA',
+          recommends: [
+            { asset: 'AI infrastructure', ticker: null, rationale: 'AI is the biggest tech wave. Infrastructure, models, applications.', transcriptRef: 'a16z 2026' },
+            { asset: 'Crypto & web3', ticker: null, rationale: 'Tokenization, DeFi. Long-term bullish on digital assets.', transcriptRef: 'a16z' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Techn pessimism', ticker: null, rationale: '"Techno-optimist manifesto." Build the future.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'horowitz',
+          name: 'Ben Horowitz',
+          role: 'a16z',
+          avatar: 'BH',
+          recommends: [
+            { asset: 'Founder-led companies', ticker: null, rationale: 'Bet on founders. "What You Do Is Who You Are."', transcriptRef: 'Philosophy' },
+            { asset: 'Cultural moats', ticker: null, rationale: 'Company culture as competitive advantage. Hard to copy.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Toxic culture', ticker: null, rationale: 'Bad culture destroys value. "Hard Thing About Hard Things."', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'wood',
+          name: 'Cathie Wood',
+          role: 'ARK Invest',
+          avatar: 'CW',
+          recommends: [
+            { asset: 'AI, robotics, multiomics', ticker: 'ARKK', rationale: 'US economy "coiled spring." 13 Big Ideas 2026. Disruptive innovation. GDP 6-8% possible.', transcriptRef: 'ARK 2026 Outlook' },
+            { asset: 'Bitcoin & tokenization', ticker: 'ARKB', rationale: 'Low correlation to other assets. Diversification. Crypto adoption.', transcriptRef: 'Big Ideas 2026' },
+            { asset: 'Energy storage, reusable rockets', ticker: null, rationale: 'Convergence of innovation platforms. Productivity boom.', transcriptRef: 'ARK 2026' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Valuation concerns', ticker: null, rationale: 'P/E compression can accompany bull markets. Focus on productivity.', transcriptRef: 'ARK 2026' }
+          ]
+        },
+        {
+          id: 'sleep',
+          name: 'Nick Sleep',
+          role: 'Nomad Investment Partnership',
+          avatar: 'NS',
+          recommends: [
+            { asset: 'Quality compounders', ticker: 'AMZN, COST', rationale: 'Scale economics shared. "Amazon and Costco letters." Long-term compounding.', transcriptRef: 'Nomad letters' },
+            { asset: 'Owner-oriented management', ticker: null, rationale: 'Capital allocation matters. Skin in the game.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Short-term thinking', ticker: null, rationale: 'Ignore quarterly noise. 20-year horizon.', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'pabrai',
+          name: 'Mohnish Pabrai',
+          role: 'Pabrai Investment Funds',
+          avatar: 'MP',
+          recommends: [
+            { asset: 'Clone investing', ticker: null, rationale: 'Copy great investors. Buffett, Munger, Lynch. "Dhandho Investor."', transcriptRef: 'Philosophy' },
+            { asset: 'Concentrated bets', ticker: null, rationale: 'Few bets, high conviction. Asymmetric upside.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Diversification for its own sake', ticker: null, rationale: 'Concentration when you have edge. "Heads I win, tails I don\'t lose much."', transcriptRef: 'Philosophy' }
+          ]
+        },
+        {
+          id: 'ravikant',
+          name: 'Naval Ravikant',
+          role: 'AngelList',
+          avatar: 'NR',
+          recommends: [
+            { asset: 'Specific knowledge', ticker: null, rationale: 'Leverage unique skills. "Specific knowledge is found by pursuing your curiosity."', transcriptRef: 'Almanack' },
+            { asset: 'Equity & ownership', ticker: null, rationale: 'Own equity in businesses. Leverage and code. Avoid renting your time.', transcriptRef: 'Philosophy' }
+          ],
+          recommendsAgainst: [
+            { asset: 'Status games', ticker: null, rationale: 'Wealth over status. Seek freedom, not approval.', transcriptRef: 'Almanack' }
+          ]
+        }
+      ]
+    }
+  ]
+};

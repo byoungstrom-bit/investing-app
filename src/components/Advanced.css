@@ -1,0 +1,33 @@
+.advanced {
+  animation: fadeIn 0.3s ease;
+}
+
+.advanced-subnav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.advanced-subnav button {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.advanced-subnav button:hover {
+  color: var(--text);
+  border-color: var(--accent-dim);
+}
+
+.advanced-subnav button.active {
+  background: var(--accent);
+  color: var(--bg-dark);
+  border-color: var(--accent);
+}

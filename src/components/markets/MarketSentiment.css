@@ -1,0 +1,89 @@
+.market-sentiment {
+  margin-top: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sentiment-meter {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.meter-track {
+  height: 12px;
+  background: var(--bg-elevated);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.meter-fill.bearish {
+  background: linear-gradient(90deg, var(--red), var(--amber));
+}
+
+.meter-fill.neutral {
+  background: var(--amber);
+}
+
+.meter-fill.bullish {
+  background: linear-gradient(90deg, var(--amber), var(--green));
+}
+
+.meter-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.sentiment-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sentiment-badge .badge {
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+}
+
+.sentiment-badge .badge.bullish {
+  background: rgba(127, 217, 98, 0.2);
+  color: var(--green);
+}
+
+.sentiment-badge .badge.neutral {
+  background: rgba(255, 180, 84, 0.2);
+  color: var(--amber);
+}
+
+.sentiment-badge .badge.bearish {
+  background: rgba(240, 113, 120, 0.2);
+  color: var(--red);
+}
+
+.sentiment-badge .score {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.sentiment-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,72 @@
+.trending {
+  animation: fadeIn 0.3s ease;
+}
+
+.market-cap-tier {
+  margin-bottom: 2.5rem;
+}
+
+.market-cap-tier:last-child {
+  margin-bottom: 0;
+}
+
+.tier-header {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tier-range {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.market-cap-tier .trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.trending-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: border-color 0.2s;
+}
+
+.trending-card:hover {
+  border-color: var(--accent-dim);
+}
+
+.trending-symbol {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.trending-name {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.trending-change {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.trending-change.up {
+  color: var(--green);
+}
+
+.trending-change.down {
+  color: var(--red);
+}

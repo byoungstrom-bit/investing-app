@@ -1,0 +1,90 @@
+.earnings-calendar {
+  margin-top: 0.5rem;
+}
+
+.earnings-tier {
+  margin-bottom: 2rem;
+}
+
+.earnings-tier .tier-header {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.earnings-tier .tier-range {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.earnings-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.earnings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.earnings-table th,
+.earnings-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.earnings-table th {
+  background: var(--bg-elevated);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.earnings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.earnings-table tr:hover td {
+  background: rgba(57, 186, 230, 0.05);
+}
+
+.earnings-table .symbol {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.earnings-table .time-badge {
+  font-size: 0.8rem;
+  background: var(--bg-elevated);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.earnings-table .estimate {
+  font-family: var(--font-mono);
+}
+
+.earnings-table .change.up {
+  color: var(--green);
+}
+
+.earnings-table .change.down {
+  color: var(--red);
+}
+
+.earnings-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

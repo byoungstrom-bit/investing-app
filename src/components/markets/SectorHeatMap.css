@@ -1,0 +1,89 @@
+.sector-heatmap {
+  margin-top: 0.5rem;
+}
+
+.section-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.heatmap-cell {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: transform 0.2s;
+}
+
+.heatmap-cell:hover {
+  transform: translateY(-2px);
+}
+
+.heatmap-cell.hot {
+  background: rgba(127, 217, 98, 0.15);
+  border-color: rgba(127, 217, 98, 0.4);
+}
+
+.heatmap-cell.warm {
+  background: rgba(127, 217, 98, 0.08);
+}
+
+.heatmap-cell.neutral {
+  background: var(--bg-card);
+}
+
+.heatmap-cell.cool {
+  background: rgba(240, 113, 120, 0.08);
+}
+
+.heatmap-cell.cold {
+  background: rgba(240, 113, 120, 0.15);
+  border-color: rgba(240, 113, 120, 0.4);
+}
+
+.sector-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.sector-ticker {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.sector-change {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.sector-change.up {
+  color: var(--green);
+}
+
+.sector-change.down {
+  color: var(--red);
+}
+
+.heatmap-legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.legend-item.cold { color: var(--red); }
+.legend-item.neutral { color: var(--text-muted); }
+.legend-item.hot { color: var(--green); }
