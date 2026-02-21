@@ -1,17 +1,22 @@
 :root {
-  --bg-dark: #0a0e14;
-  --bg-card: #131a24;
-  --bg-elevated: #1a2332;
-  --accent: #39bae6;
-  --accent-dim: #2d8fb8;
-  --green: #7fd962;
-  --red: #f07178;
-  --amber: #ffb454;
-  --text: #e6e1cf;
-  --text-muted: #8b949e;
-  --border: #2a3544;
-  --font-sans: 'DM Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --bg: #e8e4d9;
+  --bg-box: #f5f0e6;
+  --bg-card: #faf5eb;
+  --bg-elevated: #fffef8;
+  --bg-dark: #2c2c2c;
+  --red: #c41e3a;
+  --blue: #002868;
+  --gold: #ffd700;
+  --accent: #002868;
+  --accent-dim: #004080;
+  --text: #1a1a1a;
+  --text-muted: #555;
+  --border: #333;
+  --green: #228b22;
+  --amber: #b8860b;
+  --font: Arial, Helvetica, sans-serif;
+  --font-serif: "Times New Roman", Times, serif;
+  --font-mono: "Courier New", Courier, monospace;
 }
 
 * {
@@ -21,11 +26,11 @@
 }
 
 body {
-  font-family: var(--font-sans);
-  background: var(--bg-dark);
+  font-family: var(--font);
+  background: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 #root {

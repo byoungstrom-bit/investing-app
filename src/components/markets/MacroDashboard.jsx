@@ -21,10 +21,12 @@ export function MacroDashboard() {
         {MACRO_DATA.map((item) => (
           <div key={item.label} className="macro-card">
             <span className="macro-label">{item.label}</span>
-            <span className="macro-value">{item.value}</span>
-            <span className={`macro-change ${item.trend}`}>
-              {item.change}
-            </span>
+            <div className="macro-values">
+              <span className="macro-value">{item.value}</span>
+              <span className={`macro-change ${item.trend}`}>
+                {item.change}
+              </span>
+            </div>
           </div>
         ))}
       </div>

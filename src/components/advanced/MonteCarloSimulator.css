@@ -4,102 +4,57 @@
 
 .mc-form {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  border: 2px solid var(--border);
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .mc-form .form-group label {
   display: block;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
 }
 
-.mc-form .form-group select,
-.mc-form .form-group input {
+.mc-form .form-group input,
+.mc-form .form-group select {
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
-  font-family: var(--font-sans);
+  padding: 0.4rem;
+  background: #fff;
+  border: 2px solid var(--border);
 }
 
 .mc-form .run-btn {
-  padding: 0.6rem 1.25rem;
-  background: var(--accent);
-  color: var(--bg-dark);
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: var(--red);
+  color: #fff;
+  border: 2px solid var(--red);
+  font-weight: bold;
   cursor: pointer;
-}
-
-.mc-form .run-btn:hover {
-  opacity: 0.9;
 }
 
 .mc-results {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-}
-
-.mc-results h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-}
-
-.mc-note {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.percentile-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  border: 2px solid var(--border);
+  padding: 1rem;
 }
 
 .percentile-card {
   background: var(--bg-elevated);
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  border: 2px solid var(--border);
+  padding: 0.75rem;
 }
 
 .percentile-card.median {
-  border: 1px solid var(--accent-dim);
-}
-
-.percentile-card .label {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  border-color: var(--blue);
 }
 
 .percentile-card .value {
-  font-size: 1.25rem;
-  font-weight: 600;
-  font-family: var(--font-mono);
   color: var(--green);
-}
-
-@media (max-width: 600px) {
-  .percentile-grid {
-    grid-template-columns: 1fr;
-  }
 }

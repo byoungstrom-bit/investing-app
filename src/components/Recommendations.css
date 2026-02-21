@@ -3,7 +3,7 @@
 }
 
 .recommendations-group {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .recommendations-group:last-child {
@@ -11,108 +11,96 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .section-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
 }
 
 .section-header h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--blue);
+  font-family: var(--font-serif);
 }
 
 .section-header .source {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
 .section-header a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.section-header a:hover {
+  color: var(--red);
   text-decoration: underline;
 }
 
 .members-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .member-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  border: 2px solid var(--border);
   overflow: hidden;
-  transition: border-color 0.2s;
-}
-
-.member-card:hover {
-  border-color: var(--accent-dim);
 }
 
 .member-header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.25rem 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-elevated);
+  border-bottom: 2px solid var(--border);
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dim) 100%);
-  color: var(--bg-dark);
-  font-weight: 700;
-  font-size: 0.9rem;
+  width: 40px;
+  height: 40px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.member-info {
-  flex: 1;
-}
-
 .member-info h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .member-info .role {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
-
 .member-content {
-  padding: 0 1.5rem 1.5rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1rem;
 }
-
 
 .predictions-block {
   background: var(--bg-elevated);
-  border-radius: 8px;
-  padding: 1rem;
+  border: 1px solid var(--border);
+  padding: 0.75rem;
 }
 
 .block-title {
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .block-title.recommends {
@@ -124,7 +112,7 @@
 }
 
 .prediction-item {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .prediction-item:last-child {
@@ -132,33 +120,29 @@
 }
 
 .prediction-item .asset {
-  font-weight: 600;
-  color: var(--text);
+  font-weight: bold;
 }
 
 .prediction-item .ticker {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  background: var(--bg-dark);
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
+  background: #fff;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--border);
   margin-left: 0.5rem;
-  color: var(--accent);
 }
 
 .prediction-item .rationale {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-top: 0.35rem;
-  line-height: 1.5;
+  margin-top: 0.25rem;
 }
 
 .prediction-item .transcript-ref {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  opacity: 0.8;
   display: block;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 @media (max-width: 768px) {
@@ -169,6 +153,6 @@
 
 .loading, .error {
   text-align: center;
-  padding: 3rem;
+  padding: 2rem;
   color: var(--text-muted);
 }

@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense } from 'react';
 import { Markets } from './components/Markets';
 import { Advanced } from './components/Advanced';
+import { AmericanFlag } from './components/AmericanFlag';
 import './App.css';
 
 const Recommendations = lazy(() => import('./components/Recommendations').then(m => ({ default: m.Recommendations })));
@@ -11,9 +12,15 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1 className="logo">Investor's Edge</h1>
-        <p className="tagline">Research • Risk • Trends</p>
-        <nav className="nav">
+        <div className="header-inner">
+          <div className="logo-row">
+            <AmericanFlag width={48} height={32} />
+            <div>
+              <h1 className="logo">Investors Center</h1>
+              <p className="tagline">★ RESEARCH • RISK • TRENDS ★ YOUR MONEY. OUR EXPERTISE ★</p>
+            </div>
+          </div>
+          <nav className="nav">
           <button
             className={activeSection === 'recommendations' ? 'active' : ''}
             onClick={() => setActiveSection('recommendations')}
@@ -33,7 +40,12 @@ function App() {
             Advanced
           </button>
         </nav>
+        </div>
       </header>
+
+      <div className="ticker-bar">
+        ★ DOW +127 • NASDAQ +89 • S&P +34 ★ PAST PERFORMANCE DOES NOT GUARANTEE FUTURE RESULTS ★
+      </div>
 
       <main className="main">
         {activeSection === 'recommendations' && (
@@ -46,7 +58,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Data from All-In Podcast 2026 Predictions • Not financial advice</p>
+        <p>PAST PERFORMANCE DOES NOT GUARANTEE FUTURE RESULTS • NOT FDIC INSURED • Data from All-In Podcast 2026 • Not financial advice</p>
       </footer>
     </div>
   );

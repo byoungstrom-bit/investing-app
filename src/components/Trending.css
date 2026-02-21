@@ -3,64 +3,54 @@
 }
 
 .market-cap-tier {
-  margin-bottom: 2.5rem;
-}
-
-.market-cap-tier:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 }
 
 .tier-header {
   font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
 }
 
 .tier-range {
   font-size: 0.85rem;
-  font-weight: 400;
   color: var(--text-muted);
+  margin-left: 0.5rem;
 }
 
 .market-cap-tier .trending-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .trending-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1rem;
-  transition: border-color 0.2s;
-}
-
-.trending-card:hover {
-  border-color: var(--accent-dim);
+  border: 2px solid var(--border);
+  padding: 0.75rem;
 }
 
 .trending-symbol {
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1rem;
-  color: var(--accent);
+  color: var(--blue);
 }
 
 .trending-name {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 .trending-change {
   font-size: 1rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
+  font-weight: bold;
+  margin-top: 0.35rem;
 }
 
 .trending-change.up {

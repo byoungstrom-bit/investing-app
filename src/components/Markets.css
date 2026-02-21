@@ -4,30 +4,28 @@
 
 .markets-subnav {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
 .markets-subnav button {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
+  border: 2px solid var(--border);
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s;
 }
 
 .markets-subnav button:hover {
-  color: var(--text);
-  border-color: var(--accent-dim);
+  background: var(--gold);
 }
 
 .markets-subnav button.active {
-  background: var(--accent);
-  color: var(--bg-dark);
-  border-color: var(--accent);
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
 }

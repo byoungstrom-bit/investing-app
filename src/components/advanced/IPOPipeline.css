@@ -2,71 +2,45 @@
   margin-top: 0.5rem;
 }
 
-.ipo-table-wrap {
-  overflow-x: auto;
-  margin-bottom: 1rem;
-}
-
 .ipo-table {
   width: 100%;
   border-collapse: collapse;
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
+  border: 2px solid var(--border);
 }
 
 .ipo-table th,
 .ipo-table td {
-  padding: 0.75rem 1rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
 }
 
 .ipo-table th {
-  background: var(--bg-elevated);
+  background: var(--blue);
+  color: #fff;
   font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.ipo-table tr:last-child td {
-  border-bottom: none;
-}
-
-.ipo-table tr:hover td {
-  background: rgba(57, 186, 230, 0.05);
+  font-weight: bold;
 }
 
 .ipo-table .company {
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.ipo-status {
-  font-size: 0.85rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  font-weight: bold;
+  color: var(--blue);
 }
 
 .ipo-status.expected {
-  background: rgba(57, 186, 230, 0.2);
-  color: var(--accent);
+  background: var(--blue);
+  color: #fff;
+  padding: 0.1rem 0.35rem;
 }
 
 .ipo-status.rumored {
-  background: rgba(255, 180, 84, 0.2);
-  color: var(--amber);
-}
-
-.ipo-status.watching {
-  background: rgba(139, 148, 158, 0.2);
-  color: var(--text-muted);
+  background: var(--amber);
+  color: #000;
+  padding: 0.1rem 0.35rem;
 }
 
 .ipo-status.completed {
-  background: rgba(127, 217, 98, 0.2);
-  color: var(--green);
+  background: var(--green);
+  color: #fff;
+  padding: 0.1rem 0.35rem;
 }
