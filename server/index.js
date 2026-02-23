@@ -9,6 +9,7 @@ import { trendingRouter } from './routes/trending.js';
 import { sectorsRouter } from './routes/sectors.js';
 import { macroRouter } from './routes/macro.js';
 import { earningsRouter } from './routes/earnings.js';
+import { backtestRouter } from './routes/backtest.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
