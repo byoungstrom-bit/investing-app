@@ -6,6 +6,9 @@ import cors from 'cors';
 import { recommendationsRouter } from './routes/recommendations.js';
 import { riskRouter } from './routes/risk.js';
 import { trendingRouter } from './routes/trending.js';
+import { sectorsRouter } from './routes/sectors.js';
+import { macroRouter } from './routes/macro.js';
+import { earningsRouter } from './routes/earnings.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -17,6 +20,10 @@ app.use(express.json());
 app.use('/api/recommendations', recommendationsRouter);
 app.use('/api/risk', riskRouter);
 app.use('/api/trending', trendingRouter);
+app.use('/api/sectors', sectorsRouter);
+app.use('/api/macro', macroRouter);
+app.use('/api/earnings', earningsRouter);
+app.use('/api/backtest', backtestRouter);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

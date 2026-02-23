@@ -13,7 +13,7 @@ const MA_DEALS = [
 export function MandAFeed() {
   return (
     <div className="ma-feed">
-      <h2 className="section-title">M&A Activity Feed</h2>
+      <h2 className="section-title">M&A Activity Feed <span className="sample-badge">Sample data Not live</span></h2>
       <p className="section-desc">
         Recent and rumored mergers & acquisitions. Sample data.
       </p>

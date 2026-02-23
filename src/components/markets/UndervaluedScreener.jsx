@@ -29,7 +29,7 @@ export function UndervaluedScreener() {
 
   return (
     <div className="undervalued-screener">
-      <h2 className="section-title">Undervalued Screener</h2>
+      <h2 className="section-title">Undervalued Screener <span className="sample-badge">Sample data Not live</span></h2>
       <p className="section-desc">
         Screen for stocks with attractive valuations. Lower P/E and PEG may indicate undervaluation.
       </p>

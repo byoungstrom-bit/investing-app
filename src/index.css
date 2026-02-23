@@ -36,3 +36,12 @@ body {
 #root {
   min-height: 100vh;
 }
+
+.sample-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--red);
+  padding: 0.15rem 0.4rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}

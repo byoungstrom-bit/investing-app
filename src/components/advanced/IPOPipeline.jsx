@@ -15,7 +15,7 @@ const IPO_PIPELINE = [
 export function IPOPipeline() {
   return (
     <div className="ipo-pipeline">
-      <h2 className="section-title">IPO Pipeline Tracker</h2>
+      <h2 className="section-title">IPO Pipeline Tracker <span className="sample-badge">Sample data Not live</span></h2>
       <p className="section-desc">
         Upcoming and recent IPOs. Sample data.
       </p>

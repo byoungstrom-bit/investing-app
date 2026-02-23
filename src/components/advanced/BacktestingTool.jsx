@@ -10,28 +10,32 @@ export function BacktestingTool() {
   const [endDate, setEndDate] = useState('2025-01-01');
   const [strategy, setStrategy] = useState('buy_hold');
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleRun = (e) => {
+  const handleRun = async (e) => {
     e.preventDefault();
-    // Mock backtest result - replace with actual API/calculation
-    const mockReturn = 12.5 + Math.random() * 20;
-    const mockVolatility = 15 + Math.random() * 10;
-    const mockSharpe = mockReturn / mockVolatility;
-    setResult({
-      totalReturn: mockReturn.toFixed(2),
-      annualizedReturn: (mockReturn * 1.1).toFixed(2),
-      volatility: mockVolatility.toFixed(2),
-      sharpeRatio: mockSharpe.toFixed(2),
-      maxDrawdown: (-8 - Math.random() * 12).toFixed(2),
-      trades: Math.floor(20 + Math.random() * 30)
-    });
+    setLoading(true);
+    setError(null);
+    setResult(null);
+    try {
+      const params = new URLSearchParams({ symbol, startDate, endDate, strategy });
+      const res = await fetch(`/api/backtest?${params}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Backtest failed');
+      setResult(data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="backtesting-tool">
       <h2 className="section-title">Backtesting Tool</h2>
       <p className="section-desc">
-        Test trading strategies against historical data. Add API for live backtesting.
+        Test trading strategies against historical data. Buy & Hold uses live data. SMA, RSI, Momentum use sample data.
       </p>
 
       <form onSubmit={handleRun} className="backtest-form">
@@ -64,8 +68,12 @@ export function BacktestingTool() {
             <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
           </div>
         </div>
-        <button type="submit" className="run-btn">Run Backtest</button>
+        <button type="submit" className="run-btn" disabled={loading}>
+          {loading ? 'Running...' : 'Run Backtest'}
+        </button>
       </form>
+
+      {error && <p className="backtest-error">{error}</p>}
 
       {result && (
         <div className="backtest-results">
@@ -77,7 +85,9 @@ export function BacktestingTool() {
             </div>
             <div className="result-card">
               <span className="result-label">Annualized Return</span>
-              <span className="result-value positive">{result.annualizedReturn}%</span>
+              <span className={`result-value ${parseFloat(result.annualizedReturn) >= 0 ? 'positive' : 'negative'}`}>
+                {result.annualizedReturn}%
+              </span>
             </div>
             <div className="result-card">
               <span className="result-label">Volatility</span>

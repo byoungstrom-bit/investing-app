@@ -12,7 +12,7 @@ export function MarketSentiment() {
 
   return (
     <div className="market-sentiment">
-      <h2 className="section-title">Market Sentiment Meter</h2>
+      <h2 className="section-title">Market Sentiment Meter <span className="sample-badge">Sample data Not live</span></h2>
 
       <div className="sentiment-meter">
         <div className="meter-track">

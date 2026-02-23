@@ -1,7 +1,7 @@
+import { useState, useEffect } from 'react';
 import './SectorHeatMap.css';
 
-// Mock data - replace with API in production
-const SECTORS = [
+const FALLBACK_SECTORS = [
   { name: 'Technology', change: 2.4, ticker: 'XLK' },
   { name: 'Healthcare', change: -0.3, ticker: 'XLV' },
   { name: 'Financials', change: 1.8, ticker: 'XLF' },
@@ -23,31 +23,63 @@ function getHeatClass(change) {
 }
 
 export function SectorHeatMap() {
+  const [sectors, setSectors] = useState(FALLBACK_SECTORS);
+  const [source, setSource] = useState('loading');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/api/sectors')
+      .then(res => res.json())
+      .then(data => {
+        if (!cancelled && data.sectors?.length) {
+          setSectors(data.sectors);
+          setSource(data.source || 'fallback');
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setSource('fallback');
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => { cancelled = true; };
+  }, []);
+
   return (
     <div className="sector-heatmap">
       <h2 className="section-title">Sector Heat Map</h2>
-      <p className="section-desc">1-day performance by sector</p>
+      <p className="section-desc">
+        1-day performance by sector
+        {source === 'alphavantage' && ' • Live data'}
+        {source === 'fallback' && ' • Sample data'}
+      </p>
 
-      <div className="heatmap-grid">
-        {SECTORS.map((sector) => (
-          <div
-            key={sector.ticker}
-            className={`heatmap-cell ${getHeatClass(sector.change)}`}
-          >
-            <span className="sector-name">{sector.name}</span>
-            <span className="sector-ticker">{sector.ticker}</span>
-            <span className={`sector-change ${sector.change >= 0 ? 'up' : 'down'}`}>
-              {sector.change >= 0 ? '+' : ''}{sector.change.toFixed(2)}%
-            </span>
+      {loading ? (
+        <p className="sector-loading">Loading sectors...</p>
+      ) : (
+        <>
+          <div className="heatmap-grid">
+            {sectors.map((sector) => (
+              <div
+                key={sector.ticker}
+                className={`heatmap-cell ${getHeatClass(sector.change)}`}
+              >
+                <span className="sector-name">{sector.name}</span>
+                <span className="sector-ticker">{sector.ticker}</span>
+                <span className={`sector-change ${sector.change >= 0 ? 'up' : 'down'}`}>
+                  {sector.change >= 0 ? '+' : ''}{sector.change.toFixed(2)}%
+                </span>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-
-      <div className="heatmap-legend">
-        <span className="legend-item cold">-2%</span>
-        <span className="legend-item neutral">0%</span>
-        <span className="legend-item hot">+2%</span>
-      </div>
+          <div className="heatmap-legend">
+            <span className="legend-item cold">-2%</span>
+            <span className="legend-item neutral">0%</span>
+            <span className="legend-item hot">+2%</span>
+          </div>
+        </>
+      )}
     </div>
   );
 }

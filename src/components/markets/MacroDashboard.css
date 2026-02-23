@@ -2,6 +2,12 @@
   margin-top: 0.5rem;
 }
 
+.macro-loading {
+  padding: 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 .macro-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
