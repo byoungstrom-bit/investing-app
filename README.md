@@ -93,3 +93,67 @@ npm run dev
 ```
 
 Open **http://localhost:3000**
+
+---
+
+## Phil Notes
+
+### What the website does
+
+Investors Center helps people who don’t know much about investing by:
+
+- **Recommendations from proven investors** — Curated picks from the All-In Podcast (Chamath, Jason, David, Friedberg) with rationale and transcript references.
+- **Simple and complex data** — Markets tab for quick overviews (sentiment, sectors, macro, earnings) and Advanced tab for deeper tools (risk calculator, backtesting, Monte Carlo).
+- **Strategy testing** — Backtesting Tool lets users test buy-and-hold and other strategies on historical data.
+- **Risk awareness** — Risk Calculator shows volatility and risk scores for any ticker.
+- **Multiple knowledge levels** — Overview data for beginners; screener, backtest, and Monte Carlo for more advanced users.
+
+### Design inspiration
+
+The site is styled after the fictional “Investor Center” from *The Wolf of Wall Street* — the sketchy boiler-room investment firm. That’s why the look is intentionally bold, retro, and a bit over-the-top (red/white/blue, gold accents, strong typography).
+
+---
+
+### Live data vs sample data
+
+| Section | Live data? | API |
+|--------|------------|-----|
+| **Risk Calculator** | ✅ Yes | Alpha Vantage |
+| **Trending Stocks** | ✅ Yes | Alpha Vantage |
+| **Sector Heat Map** | ✅ Yes | Alpha Vantage |
+| **Macro Dashboard** | ✅ Yes | FRED (St. Louis Fed) |
+| **Earnings Calendar** | ✅ Yes | Finnhub |
+| **Backtesting (Buy & Hold)** | ✅ Yes | Alpha Vantage |
+| **Market Sentiment Meter** | ❌ Sample | — |
+| **Undervalued Screener** | ❌ Sample | — |
+| **IPO Pipeline** | ❌ Sample | — |
+| **M&A Feed** | ❌ Sample | — |
+| **Backtesting (SMA, RSI, Momentum)** | ❌ Sample | — |
+
+### Why some sections use sample data
+
+- **Market Sentiment (VIX, Put/Call, Fear & Greed)** — No free API for these. CNN Fear & Greed has no official API; alternatives are paid or unofficial.
+- **Undervalued Screener (P/E, P/B, PEG)** — Would need many API calls per symbol (Alpha Vantage free tier: 25/day). Finnhub has fundamentals but would require heavy batching and caching.
+- **IPO Pipeline** — IPO calendars are mostly paid (e.g. Finnhub IPO Calendar is premium). Free sources are limited or unreliable.
+- **M&A Feed** — M&A news and deal data usually require premium news/filings APIs.
+- **Backtesting (SMA, RSI, Momentum)** — Would need historical data plus strategy logic. Alpha Vantage free tier limits make multi-strategy backtesting impractical without paid plans.
+
+**Summary:** Adding live data for the sample sections would need expensive subscriptions (e.g. Alpha Vantage Premium ~$50/mo, Finnhub Premium) and more server-side processing than we can run on a free-tier deployment.
+
+---
+
+### Commit summary (for grading)
+
+| Commit | What it contains |
+|--------|------------------|
+| **1. Initial commit** | Full app: React + Vite, Express, Recommendations, Markets (Sentiment, Sectors, Macro, Earnings, Screener), Advanced (Risk, Backtest, IPO, M&A, Monte Carlo), styling |
+| **2. American flag, layout, tagline** | Real American flag SVG, Macro/Sectors layout fixes, tagline update |
+| **3. APIs + badges** | FRED macro, Finnhub earnings, sectors API, backtest API, “Sample data Not live” badges |
+
+---
+
+### Other details
+
+- **Stack:** React, Vite, Express, Node.js
+- **Deployment:** Railway (www.polarisprojectinvestorcenter.xyz)
+- **API keys:** Alpha Vantage, FRED, Finnhub (see LIVE_DATA.md)
